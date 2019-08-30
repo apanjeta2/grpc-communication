@@ -5,7 +5,7 @@ gRPC protokol u komunikaciji između mikroservisa
 
 Nakon pozicioniranja u folder java vršimo sljedeće korake:
 
-1.Kompajliranje servera	
+1.Kompajliranje servera 
 ./gradlew installDist
 
 2.Pokretanje servera  
