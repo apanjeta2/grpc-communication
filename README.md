@@ -1,7 +1,7 @@
 ﻿# grpc-communication
 gRPC protokol u komunikaciji između mikroservisa
 
-## Pokretanje servera
+## Pokretanje servera u Javi
 
 Nakon pozicioniranja u folder java vršimo sljedeće korake:
 
@@ -19,14 +19,17 @@ Aug 30, 2019 3:34:23 PM io.grpc.examples.helloworld.SendCodeServer start
 
 INFO: Servers for registration started, listening on 50050 
 
+## Pokretanje servera u NodeJs-u
+
 Pokrenimo sada i server implementiran u nodeJs-u. Nakon pozicioniranja u folder node-backend, sljedećom komandom pokrećemo server:
 node registration_server
 
 Potrebno je pokrenuti i server REST_API_server.js, nakon pozicioniranja u folder node-backend pozivamo ga u novoj konzoli sa komandom:
 node REST_API_server
 
+## Pokretanje React projekta
 
-Nakon pokretanja svih servera, pokrećemo i React (pozicioniranje u node->Frontend->my-app) projekat gdje se u browser-u otvara stranica. Klikom na link za registraciju, otvara nam se forma u kojoj možemo unijeti podatke 
+Nakon pokretanja svih servera, pokrećemo i React projekat (pozicioniranje u node->Frontend->my-app) sa komandom npm start gdje se u browser-u otvara stranica. Klikom na link za registraciju, otvara nam se forma u kojoj možemo unijeti podatke 
 
 Potvdom na button Register se poziva server REST_API_server koji poziva gRPC mikroservis za registraciju prosljeđujući mu podatke sa forme, a on poziva mikroservsi za slanje i generisanje koda.
 
