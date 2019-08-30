@@ -5,15 +5,18 @@ gRPC protokol u komunikaciji između mikroservisa
 
 Nakon pozicioniranja u folder java vršimo sljedeće korake:
 
-1.Kompajliranje servera 
+1.Kompajliranje servera
+
 ./gradlew installDist
 
-2.Pokretanje servera  
+2.Pokretanje servera
+
 ./build/install/examples/bin/send-code-server
 
 Dobijamo sljedeću poruku, što znači da je server pokrenut:
 
 Aug 30, 2019 3:34:23 PM io.grpc.examples.helloworld.SendCodeServer start
+
 INFO: Servers for registration started, listening on 50050 
 
 Pokrenimo sada i server implementiran u nodeJs-u. Nakon pozicioniranja u folder node-backend, sljedećom komandom pokrećemo server:
@@ -28,6 +31,7 @@ Nakon pokretanja svih servera, pokrećemo i React (pozicioniranje u node->Fronte
 Potvdom na button Register se poziva server REST_API_server koji poziva gRPC mikroservis za registraciju prosljeđujući mu podatke sa forme, a on poziva mikroservsi za slanje i generisanje koda.
 
 S obzirom da smo unutar registration_server.js fajla izvršili ispis odgovora koji vrati mikroservis SendCodeService unutar konzole iz koje smo pokrenuli prvi server imamo sljedeći ispis:
+
 vPFdItOYo97cDl (ovdje ispisuje random generisani kod)
 1 document inserted
 
